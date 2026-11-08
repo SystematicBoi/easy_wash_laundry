@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Easy Wash Laundry</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Laundry Order Tracker</h1>
+        <p>Fresh clothes. Happy customers. Better service</p>
+
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#service">service</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <div class="order-card">
+                <h2>Add New Order</h2>
+                <p>Enter customer's details below to add a new laundry order</p>
+                
+                <form>
+                    <label for="name">Customer Name: </label>
+                    <input type="text" id="name" name="name">
+                    
+                    <label for="service">Services: </label>
+                    <select id="service" name="service">
+                        <option value="Washing">Washing</option>
+                        <option value="Ironing">Ironing</option>
+                        <option value="Washing & Ironing">Washing & Ironing</option>
+                        <option value="Dry Cleaning">Dry Cleaning</option>
+                    </select>
+
+                    <label for="quantity">Quantity: </label>
+                    <input type="number" id="quantity" name="quantity">
+
+                    <label for="Price">Price: </label>
+                    <input type="number" id="price" name="price">
+
+                    <label for="date">Date: </label>
+                    <input type="date" id="date" name="date">
+
+                    <button type="button" id="add-order">Add Order</button>
+                </form>
+            </div>
+        </section>
+
+        <section>
+            <div class="order_block">
+                <div class="order-head">
+                    <div>
+                        <h3>Orders</h3>
+                        <p>Here are the latest laundry orders.</p>
+                    </div>
+
+                    <div class="total-order">
+                        Total Orders: <span id="total-order">0</span>
+                    </div>
+                </div>
+
+                <div class="order-container">
+                    <div class="order-table">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Customers</th>
+                                    <th>Service</th>
+                                    <th>Quantity</th>
+                                    <th>Price</th>
+                                    <th>Date</th>
+                                    <th>Action</th>
+                                </tr>
+                            </thead>
+
+                            <tbody id="order-list">
+
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div id="empty-state" class="empty-state">
+                        <h3>No Order Yet</h3>
+                        <p>Add your first order to get started.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="clear-section">
+            <div>
+                <div>
+                    <h3>Need to clear all orders?</h3>
+                    <p>This will remove all orders from the list.</p>
+                </div>
+
+                <button type="button" id="clear-order">Clear Orders</button>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <h3>Easy Wash Laundry Service</h3>
+        <p>You wear it, we clean it</p>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+</html>

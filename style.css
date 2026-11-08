@@ -1,0 +1,404 @@
+/* General styling */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f3f7fb;
+    color: #263445;
+    font-size: 14px;
+}
+
+/* Header */
+header {
+    background-color: #1769aa;
+    color: white;
+    padding: 20px 6%;
+    border-bottom: 4px solid #f5c542;
+}
+
+header h1 {
+    font-size: 24px;
+    margin: 0 0 6px;
+}
+
+header p {
+    font-size: 13px;
+    margin: 0;
+    color: #e5f1fc;
+}
+
+/* Navigation */
+nav {
+    margin-top: 16px;
+}
+
+nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 13px;
+}
+
+nav a:hover {
+    color: #f5d66e;
+}
+
+/* Main content */
+main {
+    width: 90%;
+    max-width: 950px;
+    margin: 28px auto;
+}
+
+main section {
+    margin-bottom: 22px;
+}
+
+/* Cards */
+.order-card {
+    background-color: white;
+    padding: 22px;
+    border: 1px solid #e1eaf2;
+    border-radius: 10px;
+}
+
+.order-card h2 {
+    color: #1769aa;
+    font-size: 19px;
+    margin: 0 0 8px;
+}
+
+.order-card p {
+    color: #687789;
+    line-height: 1.5;
+    margin-bottom: 18px;
+}
+
+/* Form */
+form {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 14px;
+}
+
+label {
+    display: block;
+    font-weight: 600;
+    font-size: 13px;
+    margin-bottom: 6px;
+    color: #34475b;
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid #cbd8e4;
+    border-radius: 6px;
+    background-color: white;
+    font: inherit;
+    color: #263445;
+    outline: none;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    border-color: #1769aa;
+    box-shadow: 0 0 0 2px #1769aa20;
+}
+
+/* Buttons */
+button {
+    background-color: #1769aa;
+    color: white;
+    border: none;
+    padding: 11px 18px;
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #105487;
+}
+
+form button {
+    align-self: end;
+    justify-self: start;
+}
+
+/* Orders and tables */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: white;
+    margin-top: 14px;
+}
+
+th,
+td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #e5edf4;
+}
+
+th {
+    background-color: #eaf3fb;
+    color: #1769aa;
+    font-size: 12px;
+}
+
+td {
+    font-size: 13px;
+}
+
+tr:last-child td {
+    border-bottom: none;
+}
+
+/* Smaller screens */
+@media (max-width: 600px) {
+    header {
+        padding: 18px 5%;
+    }
+
+    header h1 {
+        font-size: 21px;
+    }
+
+    main {
+        width: 92%;
+        margin: 20px auto;
+    }
+
+    .order-card {
+        padding: 16px;
+    }
+
+    form {
+        grid-template-columns: 1fr;
+    }
+
+    table {
+        font-size: 12px;
+    }
+
+    th,
+    td {
+        padding: 9px 7px;
+    }
+}
+
+
+
+/* Order List */
+.order-list {
+    margin-top: 24px;
+}
+
+.order-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 16px;
+}
+
+.order-head h3 {
+    font-size: 19px;
+    color: #263445;
+    margin: 0 0 5px;
+}
+
+.order-head p {
+    font-size: 13px;
+    color: #718096;
+    margin: 0;
+}
+
+/* Total Orders Badge */
+.total-order {
+    background-color: #e8f2fc;
+    color: #1769aa;
+    padding: 9px 14px;
+    border-radius: 8px;
+    font-size: 12px;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.total-order span {
+    font-size: 16px;
+    margin-left: 5px;
+}
+
+/* Order Container */
+.order-container {
+    background-color: white;
+    border: 1px solid #e1eaf2;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+/* Empty State */
+.empty-state {
+    text-align: center;
+    padding: 35px 15px;
+    background-color: #f7faff;
+    border: 1px dashed #cbdced;
+    border-radius: 8px;
+}
+
+.empty-state h3 {
+    font-size: 17px;
+    color: #34475b;
+    margin: 0 0 8px;
+}
+
+.empty-state p {
+    font-size: 13px;
+    color: #8290a0;
+    margin: 0;
+    line-height: 1.6;
+}
+
+/* Hide Empty State With JavaScript */
+.empty-state.hidden {
+    display: none;
+}
+
+/* Order Table Container */
+.order-table {
+    width: 100%;
+    overflow-x: auto;
+}
+
+.order-table table {
+    width: 100%;
+    min-width: 500px;
+    border-collapse: collapse;
+    margin-top: 0;
+}
+
+/* Clear All Orders Section */
+.clear-section {
+    margin-top: 20px;
+}
+
+.clear-section > div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    background-color: white;
+    border: 1px solid #e1eaf2;
+    border-radius: 10px;
+    padding: 18px 20px;
+}
+
+.clear-section h3 {
+    font-size: 15px;
+    color: #34475b;
+    margin: 0 0 5px;
+}
+
+.clear-section p {
+    font-size: 12px;
+    color: #8290a0;
+    margin: 0;
+    line-height: 1.5;
+}
+
+#clear-order {
+    background-color: #fff0f0;
+    color: #d64545;
+    border: 1px solid #f5cccc;
+    padding: 9px 14px;
+    white-space: nowrap;
+}
+
+#clear-order:hover {
+    background-color: #fce0e0;
+}
+
+/* Footer */
+footer {
+    margin-top: 35px;
+    padding: 22px 6%;
+    background-color: #eaf3fb;
+    border-top: 1px solid #dce9f5;
+    text-align: center;
+}
+
+footer h3 {
+    font-size: 16px;
+    color: #1769aa;
+    margin: 0 0 7px;
+}
+
+footer p {
+    font-size: 12px;
+    color: #718096;
+    margin: 0;
+    line-height: 1.6;
+}
+
+/* Mobile Layout */
+@media (max-width: 600px) {
+    .order-head {
+        align-items: flex-start;
+    }
+
+    .order-head h3 {
+        font-size: 17px;
+    }
+
+    .total-order {
+        padding: 8px 10px;
+        font-size: 11px;
+    }
+
+    .order-container {
+        padding: 12px;
+    }
+
+    .empty-state {
+        padding: 28px 10px;
+    }
+
+    .clear-section > div {
+        padding: 14px;
+        gap: 10px;
+    }
+
+    .clear-section h3 {
+        font-size: 13px;
+    }
+
+    .clear-section p {
+        font-size: 11px;
+    }
+
+    #clear-order {
+        padding: 9px 10px;
+        font-size: 11px;
+    }
+
+    footer {
+        padding: 20px 5%;
+    }
+}
